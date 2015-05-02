@@ -1,6 +1,6 @@
 /*
  * RobotWheels
- * Version 0.1 May, 2015
+ * Version 0.1.0 May, 2015
  * Copyright 2015 Diego de los Reyes
  *
  * Basic wheels control.
@@ -25,7 +25,7 @@ RobotWheels::RobotWheels()
  * @param pinLeft: pin where the left servo is connected.
  * @param pinRight: pin where the right servo is connected.
  */
-void attach(int pinLeft, int pinRight)
+void RobotWheels::attach(int pinLeft, int pinRight)
 {
 	right_servo.attach(pinRight);
 	left_servo.attach(pinLeft);
@@ -34,7 +34,7 @@ void attach(int pinLeft, int pinRight)
 /**
  * Starts moving fordward.
  */
-void moveFordward(int velocity)
+void RobotWheels::moveFordward(int velocity)
 {
 	right_servo.write(stop_position+velocity);
 	left_servo.write(stop_position+velocity);
@@ -43,7 +43,7 @@ void moveFordward(int velocity)
 /**
  * Starts moving backward.
  */
-void moveBackward(int velocity)
+void RobotWheels::moveBackward(int velocity)
 {
 	right_servo.write(stop_position-velocity);
 	left_servo.write(stop_position-velocity);
@@ -52,7 +52,7 @@ void moveBackward(int velocity)
 /**
  * Rotates left.
  */
-void rotateClockwise(int velocity)
+void RobotWheels::rotateClockwise(int velocity)
 {
 	right_servo.write(stop_position);
 	left_servo.write(stop_position+velocity);
@@ -61,16 +61,16 @@ void rotateClockwise(int velocity)
 /**
  * Rotates Right.
  */
-void rotateCounterclockwise(int velocity)
+void RobotWheels::rotateCounterclockwise(int velocity)
 {
-	right_servo.write(stop_position+rotate_velocity);
+	right_servo.write(stop_position+velocity);
 	left_servo.write(stop_position);
 }
 
 /**
  * Stops moving.
  */
-void stopAdvance()
+void RobotWheels::stopAdvance()
 {
 	right_servo.write(stop_position);
 	left_servo.write(stop_position);

@@ -1,0 +1,18 @@
+#######################################
+# Syntax Coloring Map For RobotWheels
+####################################### 
+# Class
+#######################################
+
+RobotWheels	KEYWORD1
+
+#######################################
+# Methods and Functions 
+#######################################	
+
+attach	KEYWORD2
+moveFordward	KEYWORD2
+moveBackward	KEYWORD2
+rotateClockwise	KEYWORD2
+rotateCounterclockwise	KEYWORD2
+stopAdvance	KEYWORD2

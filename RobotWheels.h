@@ -1,6 +1,6 @@
 /*
  * RobotWheels
- * Version 0.1 May, 2015
+ * Version 0.1.0 May, 2015
  * Copyright 2015 Diego de los Reyes
  *
  * Basic wheels control.
