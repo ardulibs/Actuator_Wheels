@@ -36,8 +36,8 @@ void RobotWheels::attach(int pinLeft, int pinRight)
  */
 void RobotWheels::moveFordward(int velocity)
 {
-	right_servo.write(stop_position+velocity);
-	left_servo.write(stop_position+velocity);
+	right_servo.write(stop_position-velocity);
+	left_servo.write(stop_position-velocity);
 }
 
 /**
@@ -45,8 +45,8 @@ void RobotWheels::moveFordward(int velocity)
  */
 void RobotWheels::moveBackward(int velocity)
 {
-	right_servo.write(stop_position-velocity);
-	left_servo.write(stop_position-velocity);
+	right_servo.write(stop_position+velocity);
+	left_servo.write(stop_position+velocity);
 }
 
 /**
@@ -55,7 +55,7 @@ void RobotWheels::moveBackward(int velocity)
 void RobotWheels::rotateClockwise(int velocity)
 {
 	right_servo.write(stop_position);
-	left_servo.write(stop_position+velocity);
+	left_servo.write(stop_position-velocity);
 }
 
 /**
@@ -63,7 +63,7 @@ void RobotWheels::rotateClockwise(int velocity)
  */
 void RobotWheels::rotateCounterclockwise(int velocity)
 {
-	right_servo.write(stop_position+velocity);
+	right_servo.write(stop_position-velocity);
 	left_servo.write(stop_position);
 }
 
