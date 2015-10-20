@@ -1,19 +1,19 @@
 /*
- * RobotWheels
+ * ActuatorWheels
  * Version 0.1.0 May, 2015
  * Copyright 2015 Diego de los Reyes
  *
  * Basic wheels control.
  */
 
-#ifndef RobotWheels_h
-#define RobotWheels_h
+#ifndef ActuatorWheels_h
+#define ActuatorWheels_h
 #define LIBRARY_VERSION	 0.1
 
 #include <Servo.h>
 
-// Class RobotWheels
-class RobotWheels {
+// Class ActuatorWheels
+class ActuatorWheels {
  
 	/** Public elements. **/
 	public:
@@ -21,7 +21,7 @@ class RobotWheels {
 		/**
 		 * Construct.
 		 */
-		RobotWheels();
+		ActuatorWheels();
 	
 		/**
 		 * Attach the given pins.

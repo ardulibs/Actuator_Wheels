@@ -1,12 +1,12 @@
 /*
- * RobotWheels
+ * ActuatorWheels
  * Version 0.1.0 May, 2015
  * Copyright 2015 Diego de los Reyes
  *
  * Basic wheels control.
  */
 
-#include "RobotWheels.h"
+#include "ActuatorWheels.h"
 
    
 /** CONSTRUCTORS **/
@@ -14,7 +14,7 @@
 /**
  * Construct.
  */
-RobotWheels::RobotWheels()
+ActuatorWheels::ActuatorWheels()
 {
 }
 
@@ -25,7 +25,7 @@ RobotWheels::RobotWheels()
  * @param pinLeft: pin where the left servo is connected.
  * @param pinRight: pin where the right servo is connected.
  */
-void RobotWheels::attach(int pinLeft, int pinRight)
+void ActuatorWheels::attach(int pinLeft, int pinRight)
 {
 	right_servo.attach(pinRight);
 	left_servo.attach(pinLeft);
@@ -34,7 +34,7 @@ void RobotWheels::attach(int pinLeft, int pinRight)
 /**
  * Starts moving fordward.
  */
-void RobotWheels::moveFordward(int velocity)
+void ActuatorWheels::moveFordward(int velocity)
 {
 	right_servo.write(stop_position-velocity);
 	left_servo.write(stop_position-velocity);
@@ -43,7 +43,7 @@ void RobotWheels::moveFordward(int velocity)
 /**
  * Starts moving backward.
  */
-void RobotWheels::moveBackward(int velocity)
+void ActuatorWheels::moveBackward(int velocity)
 {
 	right_servo.write(stop_position+velocity);
 	left_servo.write(stop_position+velocity);
@@ -52,7 +52,7 @@ void RobotWheels::moveBackward(int velocity)
 /**
  * Rotates left.
  */
-void RobotWheels::rotateClockwise(int velocity)
+void ActuatorWheels::rotateClockwise(int velocity)
 {
 	right_servo.write(stop_position);
 	left_servo.write(stop_position-velocity);
@@ -61,7 +61,7 @@ void RobotWheels::rotateClockwise(int velocity)
 /**
  * Rotates Right.
  */
-void RobotWheels::rotateCounterclockwise(int velocity)
+void ActuatorWheels::rotateCounterclockwise(int velocity)
 {
 	right_servo.write(stop_position-velocity);
 	left_servo.write(stop_position);
@@ -70,7 +70,7 @@ void RobotWheels::rotateCounterclockwise(int velocity)
 /**
  * Stops moving.
  */
-void RobotWheels::stopAdvance()
+void ActuatorWheels::stopAdvance()
 {
 	right_servo.write(stop_position);
 	left_servo.write(stop_position);

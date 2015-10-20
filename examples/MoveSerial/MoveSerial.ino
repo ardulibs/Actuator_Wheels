@@ -1,10 +1,11 @@
 #include <Servo.h>
-#include <RobotWheels.h>
+#include <ActuatorWheels.h>
 
 int left_servo_pin = 6;
 int right_servo_pin = 9;
+int velocity = 10;
 
-RobotWheels wheels;
+ActuatorWheels wheels;
 
 void setup() {
   Serial.begin(9600);
@@ -41,19 +42,19 @@ void executeOrder(int order) {
         break;
       case 1:
         Serial.println("Move fordward");
-        wheels.moveFordward(20);
+        wheels.moveFordward(velocity);
         break;
       case 2:
         Serial.println("Move backward");
-        wheels.moveBackward(20);
+        wheels.moveBackward(velocity);
         break;
       case 3:
         Serial.println("Rotate clockwise");
-        wheels.rotateClockwise(20);
+        wheels.rotateClockwise(velocity);
         break;
       case 4:
         Serial.println("Rotate counterclockwise");
-        wheels.rotateCounterclockwise(20);
+        wheels.rotateCounterclockwise(velocity);
         break;
       case 5:
         Serial.println("Stop");
