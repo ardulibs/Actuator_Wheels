@@ -26,7 +26,7 @@ void loop() {
 
 int getOrder() {   
   int order = 0;
-  //Recibimos la orden.
+  //We received the order.
   if (Serial.available() > 0) {
     order = Serial.parseInt();
   }
@@ -35,10 +35,10 @@ int getOrder() {
 }
 
 void executeOrder(int order) {
-    //Ejecutamos la orden.
+    //We execute the order.
     switch(order){
       case 0:
-        //No se ha recibido nada.
+        //It has not received anything.
         break;
       case 1:
         Serial.println("Move fordward");
