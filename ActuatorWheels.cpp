@@ -54,7 +54,7 @@ void ActuatorWheels::moveBackward(int velocity)
  */
 void ActuatorWheels::rotateClockwise(int velocity)
 {
-	right_servo.write(stop_position);
+	right_servo.write(stop_position+velocity);
 	left_servo.write(stop_position-velocity);
 }
 
@@ -64,7 +64,7 @@ void ActuatorWheels::rotateClockwise(int velocity)
 void ActuatorWheels::rotateCounterclockwise(int velocity)
 {
 	right_servo.write(stop_position-velocity);
-	left_servo.write(stop_position);
+	left_servo.write(stop_position+velocity);
 }
 
 /**
